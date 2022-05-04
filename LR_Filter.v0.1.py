@@ -1435,7 +1435,7 @@ if __name__ == '__main__':
 	parser.add_argument('-i', '--input_VCF', type = str, help = 'The input VCF file by short-read SV caller, etc ETCHING, Lumpy, Delly ... ')
 	parser.add_argument('-t', '--target_type', type = str, help = 'The target SV type, etc DEL, DUP, INV, or TRA')
 	parser.add_argument('-lbt', '--long_bam_t', type = str, default = '', help = 'A tumor long-read mapping sorted BAM file by Minimap2 or NGMLR')
-	parser.add_argument('-lbn', '--long_bam_n', type = str, default = '', help = ''A normal long-read mapping sorted BAM file by Minimap2 or NGMLR'')
+	parser.add_argument('-lbn', '--long_bam_n', type = str, default = '', help = 'A normal long-read mapping sorted BAM file by Minimap2 or NGMLR')
 	parser.add_argument('-rf', '--reference_seq', type = str, help = 'The reference fasta file, etc hg19 or hg38')
 	parser.add_argument('-c', '--cpus', type = int, help = 'Set the number of CPUs, this option is for multi-processing')
 	parser.add_argument('-tr', '--target_range', type = int, default = 500, help = 'Set the range of SV BP for verifying by long-reads')
