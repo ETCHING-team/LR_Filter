@@ -63,7 +63,7 @@ LR_Filter requires long-read BAM file as primary input and two modes are current
 <pre>
 <code>
 python LR_Filter.py -i {input_VCF_file} -t {DEL} -lbt {tumor_long_read_sorted_BAM_file} -lbn {normal_long_read_sorted_BAM_file} \
-                 -rf {hg19.fa} -c {1} -tr {500} -o {test}
+                    -rf {hg19.fa} -c {1} -tr {500} -o {test}
 </code>
 </pre>
 
