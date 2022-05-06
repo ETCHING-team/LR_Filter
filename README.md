@@ -51,7 +51,6 @@ optional arguments:
                         Set the range of the SV BreakPoints (BPs) for verifying by long-reads
   -o OUTNAME, --outname OUTNAME
                         Output name
-
 </code>
 </pre>
 
@@ -63,18 +62,14 @@ LR_Filter requires long-read BAM file as primary input and two modes are current
 ## Somatic SV mode
 <pre>
 <code>
-
 python LR_Filter.py -i {input_VCF_file} -t {DEL} -lbt {tumor_long_read_sorted_BAM_file} -lbn {normal_long_read_sorted_BAM_file} \
                  -rf {hg19.fa} -c {1} -tr {500} -o {test}
-
 </code>
 </pre>
 
 ## General SV mode
 <pre>
 <code>
-
 python LR_Filter.py -i {input_VCF_file} -t {DEL} -lbt {tumor_long_read_sorted_BAM_file} -rf {hg19.fa} -c {1} -tr {500} -o {test}
-
 </code>
 </pre>
