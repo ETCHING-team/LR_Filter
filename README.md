@@ -45,12 +45,36 @@ optional arguments:
                         A normal long-read mapping sorted BAM file by Minimap2 or NGMLR
   -rf REFERENCE_SEQ, --reference_seq REFERENCE_SEQ
                         The reference fasta file, etc hg19 or hg38
-  -c CPUS,           --cpus CPUS
+  -c CPUS,           --cpus CPUS, default: 1 cpu
                         Set the number of CPUs, this option is for multi-processing
-  -tr TARGET_RANGE, --target_range TARGET_RANGE
+  -tr TARGET_RANGE, --target_range TARGET_RANGE, default: 500bp
                         Set the range of the SV BreakPoints (BPs) for verifying by long-reads
   -o OUTNAME, --outname OUTNAME
                         Output name
+
+</code>
+</pre>
+
+# Example
+LR_Filter requires long-read BAM file as primary input and two modes are currently available.
+1. Somatic SV mode: this mode requires both tumor-normal long-read mapped BAM files
+2. General SV mode: in this mode, only a single long-read mapped BAM file is required
+
+## Somatic SV mode
+<pre>
+<code>
+
+python LR_Filter -i {input_VCF_file} -t {DEL} -lbt {tumor_long_read_sorted_BAM_file} -lbn {normal_long_read_sorted_BAM_file} \
+                 -rf {hg19.fa} -c {1} -tr {500} -o {test}
+
+</code>
+</pre>
+
+## General SV mode
+<pre>
+<code>
+
+python LR_Filter -i {input_VCF_file} -t {DEL} -lbt {tumor_long_read_sorted_BAM_file} -rf {hg19.fa} -c {1} -tr {500} -o {test}
 
 </code>
 </pre>
