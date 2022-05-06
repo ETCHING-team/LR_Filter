@@ -16,11 +16,19 @@ The **LR_Filer** was written by Python 3 a along with some **Python modules**. T
 * queue
 * threading
 * multiprocessing
-  
+
+If you want to install required modules, refer to the command below
+<pre>
+<code>
+pip install {"module_name"}
+</code>
+</pre>
+
 # Usages
+python LR_Filter.py. -h
 
-''' Python
-
+<pre>
+<code>
 usage: LR-Filter.v0.4.py [-h] [-i INPUT_VCF] [-t TARGET_TYPE] [-lbt LONG_BAM_T] [-lbn LONG_BAM_N] [-rf REFERENCE_SEQ] [-c CPUS] [-tr TARGET_RANGE] [-o OUTNAME]
 
 LR_Filter is SV filtering tool using long-read BAM file
@@ -37,10 +45,12 @@ optional arguments:
                         A normal long-read mapping sorted BAM file by Minimap2 or NGMLR
   -rf REFERENCE_SEQ, --reference_seq REFERENCE_SEQ
                         The reference fasta file, etc hg19 or hg38
-  -c CPUS, --cpus CPUS  Set the number of CPUs, this option is for multi-processing
+  -c CPUS,           --cpus CPUS
+                        Set the number of CPUs, this option is for multi-processing
   -tr TARGET_RANGE, --target_range TARGET_RANGE
-                        Set the range of SV BP for verifying by long-reads
+                        Set the range of the SV BreakPoints (BPs) for verifying by long-reads
   -o OUTNAME, --outname OUTNAME
                         Output name
 
-'''
+</code>
+</pre>
